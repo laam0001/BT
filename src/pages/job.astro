@@ -1,0 +1,13 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Medarbejdere from "../components/Medarbejdere.astro";
+import { Image } from "astro:assets";
+import Plads from "../assets/images/kontakt.webp";
+
+---
+
+<MainLayout title="BrolæggerTeamet">
+<Image src={Plads} alt="Pladsen ved Bagsværd Hovedgade 53-57"></Image>
+<Medarbejdere></Medarbejdere>
+    
+</MainLayout>

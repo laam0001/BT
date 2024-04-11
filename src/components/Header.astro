@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/images/bt.webp";
+import Baggrund from "../assets/images/baggrund1.webp";
+---
+
+<nav class="my-10 mx-10 lg:mx-16">
+    <ul class="flex lg:flex-row justify-between lg:list-none text-[#6B7050] font-['Oskar'] lg:text-[32px] text-[24px]">
+        
+<li class="flex "><a href="/#index/">
+<Image class="lg:w-48 w-36" src={Logo} alt="Logo"/></a></li>
+
+<div class="flex lg:gap-[100px] justify-evenly gap-12">
+<li class="hover:underline hover:underline-offset-1"><a href="/om/">Om os</a></li>
+<li class="hover:underline hover:underline-offset-1"><a href="/job/">Job</a></li>
+</div>
+
+</ul>
+</nav>
+
+
+
+
+
+
+

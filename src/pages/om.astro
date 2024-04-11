@@ -1,0 +1,14 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import Forside from "../assets/images/forside2.webp";
+import Info from "../components/Info.astro";
+import Tilbyder from "../components/Tilbyder.astro";
+---
+
+<MainLayout title="BrolæggerTeamet">
+<Image src={Forside} alt="Mand lægger brosten"></Image>
+<Info></Info>
+<Tilbyder></Tilbyder>
+
+</MainLayout>

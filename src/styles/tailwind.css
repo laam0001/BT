@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Oskar";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(Oskar-normal-400-100.ttf);
+  }
+
+  .Oskar {
+    font-family: "Oskar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url(Oskar-normal-400-100.ttf);
+  }
+}
