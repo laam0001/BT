@@ -5,12 +5,12 @@
 const { variant = "primary", size = "medium" } = Astro.props;
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
-const buttonStyling = "text-black font-['Oskar']";
+const buttonStyling = "text-[#F8F4EE] font-['Oskar']";
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const variantClasses = {
   primary:
-    "bg-[#6B7050] text-[#F8F4EE] hover:bg-[#F8F4EE] hover:text-[#6B7050] border border-4 hover:border-[#6B7050] px-16 py-2 rounded-md transition duration-100 ease-in-out ",
+    "bg-[#6B7050] text-[#F8F4EE] hover:bg-[#F8F4EE] hover:text-[#6B7050] border border-4 border-[#6B7050] hover:border-[#6B7050] px-16 py-2 rounded-md transition duration-100 ease-in-out ",
 
   secondary:
     "bg-[#F8F4EE] border border-2 border-[#6B7050] text-[#6B7050] hover:text-[#F8F4EE] hover:bg-[#6B7050] px-16 py-2 rounded-md transition duration-100 ease-in-out ",

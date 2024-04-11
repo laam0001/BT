@@ -1,107 +1,33 @@
 ---
 import Button from "./Button.astro"
 
-
-function submitForm() {
-    document.getElementById("submit-button").click();
-  }
-  
-  function sendEmail() {
-    var name = document.getElementById("name").value;
-    var lastname = document.getElementById("lastname").value;
-    var email = document.getElementById("email").value;
-    var telephone = document.getElementById("telephone").value;
-    var subject = document.getElementById("subject").value;
-    var message = document.getElementById("message").value;
-  
-    var mailtoLink = "mailto:jsev@live.dk" +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent("Navn: " + name + "\nE-mail: " + email + "\nTelefon: " + telephone + "\n\n" + message);
-  
-    window.location.href = mailtoLink;
-  }
 ---
 
 <div class="mx-10 mt-10 rounded-md">
    <div class="bg-[#EAE1D2] px-10 max-w-full rounded-md">
         <h2 class="text-[#6B7050] text-center pb-4 font-['Oskar'] text-[36px] pt-10 lg:text-[48px]">Ansøg Her</h2>
 
+  
+        <p class="font-['Arial'] text-[14px] pt-2 text-[#3E2F28] pb-6 lg:text-[18px] text-center lg:px-4">Vi anbefaler at du i den ansøgning, inkluderer dine tidligere erfaringer samt dine kompetencer. <br class="mb-2"> <span class="font-bold">Vi ser meget frem til at høre fra dig</span></p>
 
-      <form method="POST" class="font-['Arial'] text-[#3E2F28] text-[16px]" id="contact-form ">
-
-        <div class="grid grid-cols-2">
-            <div>
-                <label class="font-bold" for="name">Navn:</label>
-                <input class="border-0 rounded-md w-full -ml-1 bg-[#F8F4EE] p-3 focus:ring-0  hover:bg-[#cdd2af] active:bg-gray-700 focus:outline-none focus:border-2 focus:border-[#6B7050]"  
-                type="text" 
-                id="name" 
-                required 
-                placeholder="John"/>
-            </div>
-
-            <div>
-                <label  class="font-bold" for="lastname">Efternavn:</label>
-                <input class="border-0 rounded-md w-full bg-[#F8F4EE] p-3 focus:ring-0  hover:bg-[#cdd2af] active:bg-gray-700 focus:outline-none focus:border-2 focus:border-[#6B7050] mb-4" 
-                type="text" 
-                id="lastname" 
-                required 
-                placeholder="Johnson" />
-             </div>
-        </div>
-
-        <label class="font-bold" for="email">E-mail:</label>
-        <input class="border-0 rounded-md w-full bg-[#F8F4EE] p-3 focus:ring-0  hover:bg-[#cdd2af] active:bg-gray-700 focus:outline-none focus:border-2 focus:border-[#6B7050] mb-4" 
-        type="email" 
-        value=""
-        id="email" 
-        required 
-        placeholder="Eksempel@mail.dk"/>
-
-        <label class="font-bold" for="telephone">Telefon:</label>
-        <input class="border-0 rounded-md w-full bg-[#F8F4EE] p-3 focus:ring-0  hover:bg-[#cdd2af] active:bg-gray-700 focus:outline-none focus:border-2 focus:border-[#6B7050] mb-4" 
-        type="tel" 
-        value=""
-        id="telephone" 
-        placeholder="+45 01 02 03 04" />
-
-        <label class="font-bold" for="subject">Emne:</label>
-        <input class="border-0 rounded-md w-full bg-[#F8F4EE] p-3 focus:ring-0 hover:bg-[#cdd2af] active:bg-gray-700 focus:outline-none focus:border-2 focus:border-[#6B7050] mb-4" 
-        type="text" 
-        value=""
-        id="subject" 
-        required 
-        placeholder="Eksempel" />
-
-        <label class="font-bold" for="message">Ansøgning:</label>
-        <textarea class="border-0 rounded-md w-full bg-[#F8F4EE] p-3 focus:ring-0  hover:bg-[#cdd2af] active:bg-gray-700 focus:outline-none focus:border-2 focus:border-[#6B7050] mb-4" 
-        id="message" 
-        value=""
-        required 
-        placeholder="Skriv her..."></textarea>
-
-      </form>
-
-      <input type="hidden" id="submit-button" value="send" onclick="sendEmail()" />
 
       <div class="flex justify-center pt-4 lg:hidden send">
         <a href="mailto:Kontakt@brolæggerteamet.com">
-        <Button type="submit" variant="primary" size="small" onclick="submitForm()">Send</Button>
+        <Button type="submit" variant="primary" size="small" >Send ansøgning</Button>
     </a>
       </div>
 
-      <div class="flex justify-center pt-4 invisible lg:visible send">
-        <a href="mailto:Kontakt@brolæggerteamet.com">
-        <Button type="submit" variant="primary" size="medium" onclick="submitForm()">Send</Button>
+      <div class="flex justify-center pt-4 send">
+        <a class="hidden lg:block" href="mailto:Kontakt@brolæggerteamet.com">
+        <Button type="submit" variant="primary" size="medium" >Send ansøgning</Button>
         </a>
       </div>
 
-      <div id="kontaktnote">
 
-        <p class="text-sm font-['Arial text-[#6B7050] mt-4 pb-10 mb-10">
-          *Din ansøgning vil åbne i dit foretrukne mail program. <br />
+        <p class="text-sm font-['Arial text-[#6B7050] pt-4 pb-10 text-center">
+          *Din ansøgning vil åbne i dit mail program. <br />
           Her kan du tilføje dit CV og andet bilag*
         </p>
-      </div>
     </div>
 </div>
 
